@@ -1,0 +1,43 @@
+{
+    "name": "spa-modal",
+    "version": "1.0.0",
+    "description": "vue react modal",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "rimraf dist && webpack --config webpack.build.config.js --progress --hide-modules"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cjd6568358/spa-modal.git"
+    },
+    "author": "cjd6568358",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cjd6568358/spa-modal/issues"
+    },
+    "homepage": "https://github.com/cjd6568358/spa-modal#readme",
+    "dependencies": {
+        "vue": "^2.5.16"
+    },
+    "devDependencies": {
+        "autoprefixer": "^8.3.0",
+        "babel-core": "^6.26.0",
+        "babel-helper-vue-jsx-merge-props": "^2.0.3",
+        "babel-loader": "^7.1.4",
+        "babel-plugin-syntax-jsx": "^6.18.0",
+        "babel-plugin-transform-vue-jsx": "^3.7.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "css-loader": "^0.28.11",
+        "cssnano": "^3.10.0",
+        "node-sass": "^4.8.3",
+        "postcss-pxtorem": "^4.0.1",
+        "rimraf": "^2.6.2",
+        "sass-loader": "^7.0.1",
+        "vue-loader": "^14.2.2",
+        "vue-style-loader": "^4.1.0",
+        "vue-template-compiler": "^2.5.16",
+        "webpack": "^4.6.0",
+        "webpack-cli": "^2.0.15"
+    }
+}
