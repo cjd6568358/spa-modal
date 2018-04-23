@@ -19,6 +19,7 @@ modal.$on('maskClick', () => {
 openModal方法返回modal组件实例,因此可以使用组件的任何方法
 
 关闭弹框分为两种情况：
+
 1.关闭弹框并停留在当前页面
 ```
 this.$emit('closeModal',event);
