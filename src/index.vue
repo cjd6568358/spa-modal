@@ -160,7 +160,7 @@ export default {
         listeners.closeModal = closeModal;
         content.componentOptions.listeners = listeners;
         return (
-            <div class="hmc-modal-root">
+            <div class="modal-root">
                 <svg style="position: absolute; width: 0; height: 0;" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <symbol id="icon-close" viewBox="0 0 32 32">
