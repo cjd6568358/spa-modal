@@ -1,7 +1,7 @@
 {
     "name": "spa-modal",
     "version": "1.0.0",
-    "description": "vue react modal",
+    "description": "vue modal",
     "main": "src/index.js",
     "scripts": {
         "build": "rimraf dist && webpack --config webpack.build.config.js --progress --hide-modules"
