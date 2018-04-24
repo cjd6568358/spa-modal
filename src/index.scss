@@ -1,0 +1,219 @@
+$mask-bg: rgba(0, 0, 0, 0.5);
+$box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
+$modal-z: 99;
+$modal-container-z: 100;
+$animation-duration: 0.3s !default;
+$font-size: 12px;
+$word-black:#1e1e1e;//字体黑
+.absolute-position {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $mask-bg;
+    z-index: $modal-z;
+    font-size: $font-size;
+    .modal-container {
+        position: relative;
+        .modal-close-btn {
+            position: absolute;
+            z-index: 9;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            fill: $word-black;
+        }
+    }
+    &-center,
+    &-top,
+    &-right,
+    &-bottom,
+    &-left {
+        @extend .absolute-position;
+        z-index: $modal-container-z;
+        display: flex;
+    }
+    &-center {
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+        .modal-container {
+            min-width: 70%;
+            max-height: 90%;
+            border-radius: 4px;
+        }
+    }
+    &-top {
+        .modal-container {
+            width: 100%;
+        }
+    }
+    &-right {
+        justify-content: flex-end;
+        align-items: flex-start;
+        .modal-container {
+            height: 100%;
+        }
+    }
+    &-left {
+        .modal-container {
+            height: 100%;
+        }
+    }
+    &-bottom {
+        align-items: flex-end;
+        .modal-container {
+            width: 100%;
+        }
+    }
+    &-container {
+        box-shadow: $box-shadow;
+        background: #fff;
+    }
+}
+
+// animations, to optimize later
+.fade-in {
+    animation: $animation-duration ease-in fadeIn forwards;
+}
+
+.fade-in-reverse {
+    animation: $animation-duration ease-out fadeInReverse forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInReverse {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.slide-right {
+    transform: translateX(-100%);
+    animation: $animation-duration ease-in 0.3s slideRight forwards;
+}
+
+.slide-right-reverse {
+    animation: $animation-duration ease-out slideRightReverse forwards;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRightReverse {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.slide-left {
+    transform: translateX(100%);
+    animation: $animation-duration ease-in 0.3s slideLeft forwards;
+}
+
+.slide-left-reverse {
+    animation: $animation-duration ease-out slideLeftReverse forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeftReverse {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.slide-down {
+    transform: translateY(-100%);
+    animation: $animation-duration ease-in 0.3s slideDown forwards;
+}
+
+.slide-down-reverse {
+    animation: $animation-duration ease-out slideDownReverse forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDownReverse {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.slide-up {
+    transform: translateY(100%);
+    animation: $animation-duration ease-in 0.3s slideUp forwards;
+}
+
+.slide-up-reverse {
+    animation: $animation-duration ease-out slideUpReverse forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpReverse {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
